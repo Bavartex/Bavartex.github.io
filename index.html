@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bavartex домашняя страница</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <aside class="sidebar-menu" id="sidebarMenu">
+        
+        <div class="sidebar-left">
+            <ul class="main-nav-list">
+                
+                <li class="nav-item" data-target="submenu-advice">
+                    <span>Советы и покупка</span> <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li class="nav-item active" data-target="submenu-services">
+                    <span>Услуги</span> <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li class="nav-item account-item" id="menuProfileBtn">
+                    <span>Аккаунт</span> <i class="fa-solid fa-chevron-right"></i>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-right">
+            <button class="close-btn" id="closeMenuBtn"><i class="fa-solid fa-xmark"></i></button>
+
+            <ul class="sub-nav-list" id="submenu-models">
+                <li>Все модели BMW</li>
+                <li>M Серия</li>
+                <li>X Серия</li>
+            </ul>
+
+            <ul class="sub-nav-list" id="submenu-advice">
+                <li>Конфигуратор</li>
+                <li>Тест-драйв</li>
+            </ul>
+
+            <ul class="sub-nav-list active" id="submenu-services">
+                <li>Обслуживание и обслуживание автомобиля</li>
+                <li>Запчасти и аксессуары</li>
+                <li>Гарантия</li>
+                <li>Персонализация</li>
+                <li>Утверждено - Времена, пломба и гарантия</li>
+                <li>Порше Классик</li>
+                <li>Оригинальные аксессуары</li>
+                <li>Дипломатические продажи</li>
+                <li>Образ жизни, мода & модель автомобилей</li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="center-modal-overlay" id="cartModalOverlay">
+        <div class="center-modal">
+            <button class="modal-close" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Ваша корзина</h2>
+            <div class="modal-body">
+                <p>В данный момент ваша корзина пуста.</p>
+                <div class="cart-placeholder">
+                    <i class="fa-solid fa-cart-arrow-down" style="font-size: 40px; color: #ccc;"></i>
+                </div>
+            </div>
+            <button class="modal-btn">Перейти в каталог</button>
+        </div>
+    </div>
+
+    <div class="center-modal-overlay" id="profileModalOverlay">
+        <div class="center-modal">
+            <button class="modal-close" id="closeProfileBtn"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Личный кабинет</h2>
+            <div class="modal-body">
+                <form class="auth-form" onsubmit="event.preventDefault();">
+                    <input type="text" placeholder="Имя или логин" required>
+                    <input type="password" placeholder="Пароль" required>
+                    <a href="#" class="forgot-pass">Забыли пароль?</a>
+                    <button type="submit" class="modal-btn">Войти</button>
+                </form>
+            </div>
+            <p style="text-align: center; margin-top: 15px; font-size: 14px;">Нет аккаунта? <a href="#" style="color: #000; font-weight: bold;">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+
+    <header class="header">
+        <div class="header-container">
+            <nav class="ham-menu" id="openMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+                <button class="menu-button">Меню</button>
+            </nav>
+            <a href="#" class="main-link">Bavartex</a>
+            <div class="navigation">
+                <i class="fa-solid fa-basket-shopping" id="openCartBtn"></i>
+                <i class="fa-solid fa-user" id="openProfileBtn"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="logo">
+            <p class="discription">О компании: <br>
+Bavartex — это не просто автосалон, это ваш проводник в мир баварского инженерного искусства. Мы специализируемся на продаже автомобилей BMW, объединяя немецкую педантичность с высочайшим уровнем клиентского сервиса. <br>
+Для нас BMW — это не просто средство передвижения, это философия драйва, комфорта и статуса. В шоуруме Bavartex представлены как флагманские новинки, так и эксклюзивные модели с проверенной историей.<br>
+Вы когда-нибудь чувствовали, как автомобиль становится продолжением вас? В Bavartex мы верим, что покупка BMW — это событие, которое меняет жизнь.<br>
+Не откладывайте жизнь на потом. Приезжайте на тест-драйв уже сегодня!
+            </p>
+            <video class="discription-video" autoplay muted loop src="vid/promo.mp4" preload="metadata"></video>
+        </div>
+        
+        <div class="main-container">
+            <div class="redcar-card">
+                <img src="img/BMW M3.png" alt="BMW M3 G80" class="red-machine">
+                <p class="title">M3 G80</p>
+                <p class="title-characterisic">3.0 Бензин <br> 510 л.с. </p>
+                <p class="title-price">от 9.500.000₽</p>
+                <a href="/M3.html" class="details">> На страницу модели</a>
+            </div>
+            <div class="redcar-card">
+                <img src="img/BMW M4.png" alt="BMW M4 f82" class="white-machine yellow-machine">
+                <p class="title">M4 f82</p>
+                <p class="title-characterisic">3.0 Бензин <br> 450 л.с. </p>
+                <p class="title-price">от 5.500.000₽</p>
+                <a href="/M4.html" class="details">> На страницу модели</a>
+            </div>
+        </div>
+        
+        <div class="main-container">
+            <div class="redcar-card">
+                <img src="img/BMW M5.png" alt="BMW M5 f10" class="red-machine">
+                <p class="title">M5 f10</p>
+                <p class="title-characterisic">4.4 Бензин <br> 560 л.с. </p>
+                <p class="title-price">от 4.500.000₽</p>
+                <a href="/M5.html" class="details">> На страницу модели</a>
+            </div>
+            <div class="redcar-card">
+                <img src="img/BMW X5M.png" alt="BMW x5m f85" class="white-machine">
+                <p class="title">x5m f85</p>
+                <p class="title-characterisic">4.4 Бензин <br> 575 л.с. </p>
+                <p class="title-price">от 5.500.000₽</p>
+                <a href="x5m f85.html" class="details">> На страницу модели</a>
+            </div>
+        </div>
+        
+        <div class="main-container" style="margin-bottom: 100px;">
+            <div class="redcar-card">
+                <img src="img/BMW M6.png" alt="BMW M6 f13" class="red-machine">
+                <p class="title">M6 f13</p>
+                <p class="title-characterisic">4.4 Бензин <br> 560 л.с. </p>
+                <p class="title-price">от 4.500.000₽</p>
+                <a href="/M6.html" class="details">> На страницу модели</a>
+            </div>
+            <div class="redcar-card">
+                <img src="img/BMW M8.png" alt="BMW M8 f91" class="white-machine">
+                <p class="title">M8 f91</p>
+                <p class="title-characterisic">4.4 Бензин <br> 625 л.с. </p>
+                <p class="title-price">от 12.500.000₽</p>
+                <a href="/M8.html" class="details">> На страницу модели</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Bavartex</h2>
+                <p>Ваша мечта становится реальностью</p>
+            </div>
+
+            <div class="footer-columns">
+                <div class="column">
+                    <a href="#">Bavartex - один из крупнейших официальных дилеров BMW</a>
+                    <a href="#">в столице Черноземья. Салон предоставляет набор услуг по</a>
+                    <a href="#">продаже автомобилей BMW M серии.</a>
+                    <a href="#">Наш высококвалифицированный персонал поможет вам принять</a>
+                    <a href="#">правильное решение в пользу нашего дилерского центра</a>
+                </div>
+                <div class="column">
+                    <a href="#">Мы всегда рады видеть вас</a>
+                    <a href="#">в числе своих друзей и клиентов</a>
+                </div>
+                <div class="column">
+                    <a href="#">Bavartex Воронеж</a>
+                    <a href="#">Воронеж, ул.Дорожная 7в</a>
+                    <a href="#">Телефон: +7 (473) 20-77-136</a>
+                    <a href="#">E-mail: info@Bavartex-voronezh.ru</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-rss"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+            </div>
+            <p>©Copyright. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
